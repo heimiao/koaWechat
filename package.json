@@ -1,0 +1,41 @@
+{
+	"name": "wechat",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.15.3",
+		"circular-json": "^0.5.9",
+		"crypto": "^1.0.1",
+		"knex": "^0.13.0",
+		"koa": "^2.11.0",
+		"koa-bodyparser": "^3.2.0",
+		"koa-log4": "^2.1.0",
+		"koa-router": "^7.4.0",
+		"koa-static": "^5.0.0",
+		"koa2-cors": "^2.0.6",
+		"koa2-response": "^2.0.2",
+		"lodash": "^4.17.4",
+		"mkdir-p": "0.0.7",
+		"mysql": "^2.14.1",
+		"node-cache": "^5.1.0",
+		"pify": "^2.3.0",
+		"request": "^2.88.0",
+		"wafer-node-sdk": "^1.4.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "^7.1.0",
+		"debug": "^2.6.8",
+		"eslint": "^3.9.1",
+		"eslint-config-standard": "^6.2.1",
+		"eslint-plugin-promise": "^3.3.1",
+		"eslint-plugin-standard": "^2.0.1"
+	}
+}

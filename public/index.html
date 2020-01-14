@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="shortcut icon"  href="images/ailogo.png">
+		<link rel="shortcut icon"  href="favicon.ico" type="image/x-icon" >
+		<style type="text/css">
+			.indexPage {
+				text-align: center;
+			}
+			
+			h3 {
+				font-size: 18px;
+				color: #FE9CAB;
+			}
+			
+			img {
+				width: 100%;
+			}
+			
+			button {
+				display: inline-block;
+				border: 0px;
+				background: green;
+				color: #fff;
+				font-size: 22px;
+				cursor: pointer;
+				line-height: 45px;
+				width: 60%;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="indexPage">
+			<h3>当2019把我交给2020时</h3>
+			<img src="images/home.jpg" />
+			<button onclick="throughYear()">我要测试</button>
+		</div>
+		<script type="text/javascript">
+//			<script src="http://res2.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+			<script type="text/javascript">
+			function throughYear() {
+				//测试帐号信息 
+				// var AppID = "wx98891d75c2ec19cd" 
+				var AppID = "wxf0604c1f99f9ad61";
+				var router = '/canvas.html';
+				// 这是编码后的地址
+				//var return_uri = 'http://xtkn.datangnet.com.cn' + router;
+				 var return_uri = 'http://2zdp49.natappfree.cc' + router;
+				var scope = 'snsapi_userinfo';
+				var url = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + AppID + '&redirect_uri=' + return_uri + '&response_type=code&scope=' + scope + '&state=STATE#wechat_redirect';
+				window.location.href = url
+			}
+		</script>
+	</body>
+
+</html>

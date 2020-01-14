@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var gen = function*() {
+				var data = yield(data1) => {
+					console.log("data1", data1);
+					return "111111"
+				};
+				console.log("data:", data);
+
+				var data2 = yield(data3) => {
+					console.log("data1", data3);
+					return "111111"
+				};
+				console.log("data2:", data2);
+				return data2;
+			}
+			var gen1 = gen;
+			var gen2 = gen()
+
+			gen2.next(1);
+			gen2.next(2);
+			gen2.next(3);
+			gen2.next(4);
+			gen2.next(5);
+
+			var asyncOne = async() => {
+				var data = await new Promise((resolve, reject) => {
+					setTimeout(() => {
+						resolve({
+							name: "heimao"
+						})
+					}, 1000)
+				});
+				var data2 = await new Promise((resolve, reject) => {
+					setTimeout(() => {
+						resolve({
+							name: "heimao2"
+						})
+					}, 1000)
+					console.log("函数依赖调用2", data);
+				});
+
+				var data3 = await new Promise((resolve, reject) => {
+					setTimeout(() => {
+						resolve({
+							name: "heimao3"
+						})
+					}, 1000)
+					console.log("函数依赖调用3", data2);
+				});
+
+				console.log(data3);
+			}
+			asyncOne();
+
+			var arr = [{
+				id: 1,
+				name: "heimao"
+			}, {
+				id: 1,
+				name: "baimao"
+			}, {
+				id: 3,
+				name: "huagnmao"
+			}]
+			var arra2 = [];
+			arr.reduce((total, num) => { 
+				if(total.id==num.id)
+				{
+					total.name=[];
+					
+				}
+				console.log(total, num); 
+			})
+			
+			
+			var numbers = [15, 2,3, 1,1, 4,7];
+			var obj={};
+			numbers.reduce((one,tow,three)=>{
+				console.log(one,tow,three);
+			});
+		</script>
+	</body>
+
+</html>
